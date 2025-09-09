@@ -5,6 +5,7 @@ import '../presentation/home_screen/home_screen.dart';
 import '../presentation/club_profile_screen/club_profile_screen.dart';
 import '../presentation/user_profile_screen/user_profile_screen.dart';
 import '../presentation/find_opponent_screen/find_opponent_screen.dart';
+import '../presentation/tournament_screen/tournament_screen.dart';
 
 class MainLayout extends StatefulWidget {
   final int initialIndex;
@@ -64,7 +65,7 @@ class _MainLayoutState extends State<MainLayout> {
           const FindOpponentScreen(),
           
           // 2: Giải đấu
-          _buildPlaceholderPage("Giải đấu", "Trang giải đấu"),
+          const TournamentScreen(),
           
           // 3: Club
           const ClubProfileScreen(),
