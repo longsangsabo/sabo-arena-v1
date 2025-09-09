@@ -1,5 +1,11 @@
 
-# Sabo Arena v1 - Billiards Club Management App
+# Sabo Arena v1 - Bill| Screen | Status | Description |
+|--------|---------|-------------|
+| 🏠 Home | ✅ Complete | TikTok-style vertical feed |
+| 🏛️ Club Profile | ✅ Complete | Club info & member rankings |
+| 👤 User Profile | ✅ Complete | Personal stats & tournaments |
+| ⚔️ Find Opponent | 🔄 Ready | Player matching (code available) |
+| 🏆 Tournament | ✅ Complete | TikTok-style tournament feed |lub Management App
 
 A modern Flutter-based billiards club management application with TikTok-style UI and real-time features.
 

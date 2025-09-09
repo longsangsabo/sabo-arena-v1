@@ -1,12 +1,17 @@
 import 'package:flutter/material.dart';
 
-LightCodeColors get appTheme => ThemeHelper().themeColor();
-ThemeData get theme => ThemeHelper().themeData();
+LightCodeColors get appTheme => ThemeHelper.instance.themeColor();
+ThemeData get theme => ThemeHelper.instance.themeData();
 
 /// Helper class for managing themes and colors.
 
 // ignore_for_file: must_be_immutable
 class ThemeHelper {
+  // Singleton instance
+  static final ThemeHelper _instance = ThemeHelper._internal();
+  static ThemeHelper get instance => _instance;
+  ThemeHelper._internal();
+  
   // The current app theme
   var _appTheme = "lightCode";
 
@@ -40,13 +45,30 @@ class ThemeHelper {
 
   /// Returns the current theme data.
   ThemeData themeData() => _getThemeData();
+  
+  /// Change theme
+  void changeTheme(String theme) {
+    _appTheme = theme;
+  }
+  
+  /// Get current theme colors
+  LightCodeColors get themeColors => _getThemeColors();
 }
 
 class ColorSchemes {
   static final lightCodeColorScheme = ColorScheme.light();
 }
 
-class LightCodeColors {
+/// AppColors interface
+abstract class AppColors {
+  Color get primary;
+  Color get secondary;
+  Color get background;
+  Color get surface;
+  Color get error;
+}
+
+class LightCodeColors implements AppColors {
   // App Colors
   Color get blue_gray_400 => Color(0xFF8A8B8F);
   Color get white_A700 => Color(0xFFFFFFFF);
@@ -67,6 +89,18 @@ class LightCodeColors {
   Color get greyCustom => Colors.grey;
   Color get blackCustom => Colors.black;
   Color get color990000 => Color(0x99000000);
+  
+  // AppColors interface implementation
+  @override
+  Color get primary => blue_gray_900;
+  @override
+  Color get secondary => purple_A200;
+  @override
+  Color get background => white_A700;
+  @override
+  Color get surface => white_A700;
+  @override
+  Color get error => Colors.red;
 
   // Color Shades - Each shade has its own dedicated constant
   Color get grey200 => Colors.grey.shade200;

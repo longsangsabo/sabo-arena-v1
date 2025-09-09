@@ -7,11 +7,18 @@ const num FIGMA_DESIGN_STATUS_BAR = 0;
 
 extension ResponsiveExtension on num {
   double get _width => SizeUtils.width;
+  double get _height => SizeUtils.height;
 
   double get h => ((this * _width) / FIGMA_DESIGN_WIDTH);
 
   // Alias chiều rộng rõ nghĩa (trước đây chỉ có h dùng theo chiều rộng thiết kế)
   double get w => ((this * _width) / FIGMA_DESIGN_WIDTH);
+
+  // Vertical spacing/height
+  double get v => ((this * _height) / FIGMA_DESIGN_HEIGHT);
+
+  // Adaptive size (square dimensions)
+  double get adaptSize => ((this * _width) / FIGMA_DESIGN_WIDTH);
 
   double get fSize => ((this * _width) / FIGMA_DESIGN_WIDTH);
 }

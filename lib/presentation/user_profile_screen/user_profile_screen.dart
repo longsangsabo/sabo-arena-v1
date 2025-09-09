@@ -72,7 +72,7 @@ class UserProfileScreen extends StatelessWidget {
 
   Widget _buildUserProfileSection() {
     return Container(
-      margin: EdgeInsets.fromLTRB(-4.h, 0, -4.h, 0),
+      margin: EdgeInsets.fromLTRB(0, 0, 0, 0),
       width: 418.h,
       height: 538.h,
       decoration: BoxDecoration(
