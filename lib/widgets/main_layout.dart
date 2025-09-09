@@ -2,7 +2,9 @@ import 'package:flutter/material.dart';
 import '../core/app_export.dart';
 import '../widgets/custom_bottom_bar.dart';
 import '../presentation/home_screen/home_screen.dart';
-// import '../presentation/clb_profile_screen/clb_profile_screen.dart';
+import '../presentation/club_profile_screen/club_profile_screen.dart';
+import '../presentation/user_profile_screen/user_profile_screen.dart';
+import '../presentation/find_opponent_screen/find_opponent_screen.dart';
 
 class MainLayout extends StatefulWidget {
   final int initialIndex;
@@ -59,16 +61,16 @@ class _MainLayoutState extends State<MainLayout> {
           const HomeScreen(),
           
           // 1: Tìm đối
-          _buildPlaceholderPage("Tìm đối", "Trang tìm đối thủ"),
+          const FindOpponentScreen(),
           
           // 2: Giải đấu
           _buildPlaceholderPage("Giải đấu", "Trang giải đấu"),
           
           // 3: Club
-          _buildPlaceholderPage("Club", "Trang thông tin CLB"),
+          const ClubProfileScreen(),
           
           // 4: Hồ sơ
-          _buildPlaceholderPage("Hồ sơ", "Trang hồ sơ cá nhân"),
+          const UserProfileScreen(),
         ],
       ),
       bottomNavigationBar: CustomBottomBar(

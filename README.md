@@ -1,21 +1,52 @@
 
-#  Flutter
-A modern Flutter-based mobile application utilizing the latest mobile development technologies and tools for building responsive cross-platform applications.
-## 📋 Prerequisites
-- Flutter SDK (^3.29.2)
-- Dart SDK
-- Android Studio / VS Code with Flutter extensions
-- Android SDK / Xcode (for iOS development)
-## 🛠️ Installation
+# Sabo Arena v1 - Billiards Club Management App
 
-1. Install dependencies:
+A modern Flutter-based billiards club management application with TikTok-style UI and real-time features.
+
+## 🚀 Quick Start
+
+### 1. Install Dependencies
 ```bash
 flutter pub get
 ```
 
-2. Run the application:
+### 2. Run Application
 ```bash
-flutter run
+export PATH="/tmp/flutter/bin:$PATH"
+flutter run -d web-server --web-port=8080
+```
+
+### 3. Access App
+- **URL**: http://localhost:8080
+- **Browser**: Chrome/Edge recommended
+
+## � Features Completed
+
+| Screen | Status | Description |
+|--------|---------|-------------|
+| 🏠 Home | ✅ Complete | TikTok-style vertical feed |
+| 🏛️ Club Profile | ✅ Complete | Club info & member rankings |
+| 👤 User Profile | ✅ Complete | Personal stats & tournaments |
+| ⚔️ Find Opponent | 🔄 Ready | Player matching (code available) |
+| 🏆 Tournament | � TODO | Tournament listings |
+
+## 🔧 Development Commands
+
+```bash
+# Hot reload
+r
+
+# Hot restart  
+R
+
+# Clear console
+c
+
+# Quit app
+q
+
+# Check errors
+flutter analyze
 ```
 ## 📁 Project Structure
 ```
