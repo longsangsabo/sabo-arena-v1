@@ -12,6 +12,13 @@ class ImageConstant {
   static String imgNavTmI = '${_basePath}img_nav_tm_i.svg';
   static String imgNavTrangCh = '${_basePath}img_nav_trang_ch.svg';
 
+  // Bottom Navigation Icons
+  static String imgHomeStroke = '${_basePath}home-stroke-icon.svg';
+  static String imgSearch = '${_basePath}search-icon.svg';
+  static String imgTournament = '${_basePath}tournament_icon.svg';
+  static String imgAccountSolid = '${_basePath}account-solid-icon.svg';
+  static String imgClbIcon = '${_basePath}clb_icon.svg';
+
   // Custom Image View Screen
   static String imgImageNotFound = '${_basePath}image_not_found.png';
 }

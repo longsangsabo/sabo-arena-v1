@@ -10,6 +10,9 @@ extension ResponsiveExtension on num {
 
   double get h => ((this * _width) / FIGMA_DESIGN_WIDTH);
 
+  // Alias chiều rộng rõ nghĩa (trước đây chỉ có h dùng theo chiều rộng thiết kế)
+  double get w => ((this * _width) / FIGMA_DESIGN_WIDTH);
+
   double get fSize => ((this * _width) / FIGMA_DESIGN_WIDTH);
 }
 
